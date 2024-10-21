@@ -1,0 +1,77 @@
+
+
+<div class=" w-100 text-light d-flex flex-column align-items-center">
+
+    <swiper-container class=" w-100" [loop]="true" [autoplay]="{ delay: 5500, disableOnInteraction: false }" autoplay="true">
+        
+        <swiper-slide class="w-100  p-3">
+            <div class="row w-100   justify-content-evenly align-items-center  g-0 p-5" 
+                 style="background-image: url('/assets/Men.jpg'); 
+                        background-repeat: no-repeat; 
+                        background-size: cover;
+                        background-position: center center;">
+    
+                <div class="custom text-white d-flex w-100 flex-column p-4  p-md-5  ms-md-3">
+                    <div class="position-relative overflow-hidden  py-5  py-md-5 CustomT">
+                        <h6 class="text-light mb-5 bg-primary p-2  h1 position-absolute">20% OFF</h6>
+                    </div>
+                     
+                    <div class="CustomT position-relative w-100 py-5  overflow-hidden">
+                        <h6 class="h1 font-weight-bold  p-2 text-light position-absolute" style="background-color: #031f42;">On Men's Chlothes</h6>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </swiper-slide>
+        <swiper-slide class="w-100  p-3">
+            <div class="row w-100   justify-content-evenly align-items-center  g-0 p-5" 
+                 style="background-image: url('/assets/Women.jpg'); 
+                        background-repeat: no-repeat; 
+                        background-size: cover;
+                        background-position: top center;">
+    
+                <div class="custom text-white d-flex w-100 flex-column p-4  p-md-5  ms-md-3">
+                    <div class="position-relative overflow-hidden  py-5  py-md-5 CustomT">
+                        <h6 class="text-light mb-5 bg-primary p-2  h1 position-absolute">New Collection</h6>
+                    </div>
+                    
+                    <div class="CustomT position-relative w-100 py-5  overflow-hidden">
+                        <h6 class="h1 font-weight-bold  p-2 text-light position-absolute" style="background-color: #031f42;">Women's Chlothes</h6>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </swiper-slide>
+        
+    </swiper-container>
+
+    <div class="row gy-3 gx-5 px-5 py-2 w-100">
+        <div *ngFor="let product of products" class="col-md-2 p-2 text-center custom-border  position-relative container">
+            <div class=" p-1 d-flex flex-column h-100 justify-content-between">
+                <img [src]="product.image" class="w-100" alt="">
+                <div>
+                    <h4 class="text-start">{{product.title.slice(0,20)}}</h4>
+                <h6 class="text-start">{{product.category}}</h6>
+               
+            </div>
+            <div>
+                <div class="d-flex justify-content-between ">
+                    <p class="m-0">{{product.price}}<span>EGP</span></p>
+                    <div>
+                        <i class="fas fa-star ratecolor"></i>
+                        <span >{{product.rating.rate}}</span>
+                    </div>
+                </div>
+
+                <button  class="button-light p-2 w-100 align-self-end  border-0">Add to Cart +</button>
+            </div>
+
+            </div>
+
+        </div>
+       
+    </div>
+   
+</div>

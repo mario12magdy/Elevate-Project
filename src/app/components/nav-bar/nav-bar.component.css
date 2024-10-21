@@ -1,0 +1,13 @@
+.form-control::placeholder{
+    color: antiquewhite;
+}
+.active{
+    background-color:#B68D61 !important;
+  
+  }
+  .nav-link{
+    transition: 1s;
+  }
+  .navbar{
+    background-color: #032142;
+    }
